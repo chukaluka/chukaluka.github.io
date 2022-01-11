@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
 
 .header-section h4 {
     color: whitesmoke;
-    font-size: 20px;
+    font-size: 5vmin;
     padding-right: 100px;
     font-family: Tahoma;
     font-style: italic;
@@ -25,12 +26,12 @@ body {
 
 .firstSpan {
     color: whitesmoke;
-    font-size: 40px;
+    font-size: 6vmin;
 }
 
 .secondSpan {
     color: rgb(233, 32, 199);
-    font-size: 36px;
+    font-size: 5vmin;
 }
 
 .main-div {
@@ -62,18 +63,22 @@ body {
     padding: 0 40px 40px;
 }
 
+.divs {
+    display: flex;
+    flex-direction: row;
+}
+
 .second-div {
     display: block;
     background-color: springgreen;
     width: 500px;
-    height: 40vh;
+    height: 50vh;
     margin: 55px;
     text-align: left;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 30px 30px 0 30px;
     line-height: 30px;
-    float: left;
     border-radius: 25px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
@@ -95,8 +100,7 @@ body {
     display: block;
     background-color: rgb(233, 32, 199);
     width: 500px;
-    float: right;
-    height: 40vh;
+    height: 50vh;
     text-align: left;
     font-size: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -126,10 +130,9 @@ body {
     color: wheat;
     width: 800px;
     margin: 0 auto;
-    height: 50vh;
+    height: 30vh;
     line-height: 30px;
     text-align: center;
-    margin-top: 250px;
     padding: 20px 30px 0;
     border-radius: 25px;
     -webkit-border-radius: 25px;
@@ -139,13 +142,12 @@ body {
 }
 
 .first-aside {
-    margin: 0 auto;
+    margin: 50px auto;
     width: 1000px;
-    height: 10vh;
+    height: 15vh;
     background-color: violet;
-    color: rgb(255, 255, 255);
-    margin-top: 50px;
-    padding: 50px;
+    color: rgb(22, 19, 19);
+    padding: 25px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -162,23 +164,20 @@ body {
     width: 600px;
     height: 30vh;
     color: yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
-    text-align: right;
+    text-align: center;
     margin: 50px 300px;
     padding: 40px;
     line-height: 30px;
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
 }
 
 .footer-div h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
-    float: left;
 }
 
 #myBtn {
@@ -205,6 +204,12 @@ body {
     background-color: #555;
 }
 
+.imgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .img-h2 {
     color: yellowgreen;
     text-align: center;
@@ -214,10 +219,54 @@ body {
 
 .pic-div {
     width: 150px;
+    margin: 20px;
     border-radius: 7px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     -ms-border-radius: 7px;
     -o-border-radius: 7px;
-    margin: 20px 40px;
+}
+
+@media only screen and (max-width:850px) {
+    body {
+        overflow-x: none;
+    }
+    .header-section {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .main-div {
+        width: 100%;
+        margin: 0 auto;
+        height: 100%;
+    }
+    .second-div {
+        width: 100%;
+        text-align: center;
+        height: 100%;
+    }
+    .third-div {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .fourth-div {
+        width: 100%;
+        margin: 0 auto;
+        height: 100%;
+    }
+    .first-aside {
+        margin: 50px auto;
+        width: 100%;
+        height: 100%;
+    }
+    .footer-div {
+        margin: 0 auto;
+    }
+    .imgs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
